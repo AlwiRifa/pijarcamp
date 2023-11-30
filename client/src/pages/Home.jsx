@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5555/produks") // Update the endpoint
+      .get("pijarcamp-server.vercel.app/produks") // Update the endpoint
       .then((response) => {
         setProduks(response.data.data); // Update the state
         setLoading(false);

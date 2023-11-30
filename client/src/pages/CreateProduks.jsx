@@ -21,7 +21,7 @@ const CreateProduk = ({ destination = "/" }) => {
     };
     setLoading(true);
     axios
-      .post("http://localhost:5555/produks", data) // Update the endpoint to match your backend
+      .post("pijarcamp-server.vercel.app/produks", data) // Update the endpoint to match your backend
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Produk Created successfully", { variant: "success" });
