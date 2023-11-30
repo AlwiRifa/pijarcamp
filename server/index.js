@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "pijarcamp-level3-tugas10-alwi.vercel.app",
+    origin: "https://pijarcamp-level3-tugas10-alwi.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
