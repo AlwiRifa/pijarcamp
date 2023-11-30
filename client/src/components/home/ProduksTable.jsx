@@ -5,38 +5,27 @@ import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 
 const ProduksTable = ({ produks }) => {
   return (
-    <table className='w-full border-separate border-spacing-2'>
-      <thead>
-        <tr className='bg-gray-200'>
-          <th className='border border-gray-600 rounded-md p-2'>No</th>
-          <th className='border border-gray-600 rounded-md p-2'>Nama</th>
-          <th className='border border-gray-600 rounded-md max-md:hidden p-2'>
-            Description
-          </th>
-          <th className='border border-gray-600 rounded-md p-2'>Harga</th>
-          <th className='border border-gray-600 rounded-md p-2'>Jumlah</th>
-          <th className='border border-gray-600 rounded-md p-2'></th>
+    <div className='border rounded-lg'>
+    <table className='w-full'>
+      <thead className='border-b'>
+        <tr className=''>
+          <th className='p-4 text-center font-medium text-zinc-500 w-16'>No</th>
+          <th className='p-4 text-left font-medium text-zinc-500'>Nama</th>
+          <th className='p-4 text-left font-medium text-zinc-500'>Description</th>
+          <th className='p-4 text-center font-medium text-zinc-500'>Harga</th>
+          <th className='p-4 text-center font-medium text-zinc-500'>Jumlah</th>
+          <th className='p-4 text-center font-medium text-zinc-500'></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className='p-6'>
         {produks.map((produk, index) => (
-          <tr key={produk._id} className={(index % 2 === 0) ? 'bg-gray-100' : 'bg-white'}>
-            <td className='border border-gray-700 rounded-md text-center p-2'>
-              {index + 1}
-            </td>
-            <td className='border border-gray-700 rounded-md text-center p-2'>
-              {produk.nama_produk}
-            </td>
-            <td className='border border-gray-700 rounded-md text-center max-md:hidden p-2'>
-              {produk.keterangan}
-            </td>
-            <td className='border border-gray-700 rounded-md text-center p-2'>
-              {produk.harga}
-            </td>
-            <td className='border border-gray-700 rounded-md text-center p-2'>
-              {produk.jumlah}
-            </td>
-            <td className='border border-gray-700 rounded-md text-center p-2'>
+          <tr key={produk._id} className='p-6 hover:bg-zinc-100 border-b text-zinc-900'>
+            <td className='p-4 text-center'>{index + 1}</td>
+            <td className='p-4 text-left'>{produk.nama_produk}</td>
+            <td className='p-4 text-left'>{produk.keterangan}</td>
+            <td className='p-4 text-center font-medium'>Rp.{produk.harga}</td>
+            <td className='p-4 text-center'>{produk.jumlah}</td>
+            <td className='p-4 text-center'>
               <div className='flex justify-center gap-x-4'>
                 <Link to={`/produks/edit/${produk._id}`}>
                   <AiOutlineEdit className='text-2xl text-yellow-600' />
@@ -50,6 +39,7 @@ const ProduksTable = ({ produks }) => {
         ))}
       </tbody>
     </table>
+    </div>
   );
 };
 

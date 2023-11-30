@@ -15,9 +15,8 @@ app.use(
   })
 );
 
-app.get("/", (request, response) => {
-  console.log(request);
-  return response.status(234).send("Welcome to MERN stack");
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Server is running" });
 });
 
 app.use("/produks", produksRoute); // Fix the import here
