@@ -40,7 +40,7 @@ const EditProduk = ({ destination = "/" }) => {
     };
     setLoading(true);
     axios
-      .put(`http://localhost:5555/produks/${id}`, data)
+      .put(`https://pijarcamp-server.vercel.app/produks/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Produk Edited successfully", { variant: "success" });
