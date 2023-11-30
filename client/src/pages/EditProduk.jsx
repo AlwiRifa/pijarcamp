@@ -4,7 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useSnackbar } from "notistack";
 
 const EditProduk = ({ destination = "/" }) => {
-  const [namaProduk, setNamaProduk] = useState("");
+  const [namaProdukState, setNamaProdukState] = useState("");
   const [keterangan, setKeterangan] = useState("");
   const [harga, setHarga] = useState("");
   const [jumlah, setJumlah] = useState("");
@@ -18,7 +18,7 @@ const EditProduk = ({ destination = "/" }) => {
     axios
       .get(`https://pijarcamp-server.vercel.app/produks/${id}`)
       .then((response) => {
-        setNamaProduk(response.data.nama_produk);
+        setNamaProdukState(response.data.namaProduk);
         setKeterangan(response.data.keterangan);
         setHarga(response.data.harga);
         setJumlah(response.data.jumlah);
@@ -34,7 +34,7 @@ const EditProduk = ({ destination = "/" }) => {
 
   const handleEditProduk = () => {
     const data = {
-      nama_produk,
+      namaProduk,
       keterangan,
       harga,
       jumlah,
@@ -70,8 +70,8 @@ const EditProduk = ({ destination = "/" }) => {
             </label>
             <input
               type="text"
-              value={namaProduk}
-              onChange={(e) => setNamaProduk(e.target.value)}
+              value={namaProdukState}
+              onChange={(e) => setNamaProdukState(e.target.value)}
               className="border rounded-lg border-zinc-300 px-4 py-2 w-full"
             />
           </div>

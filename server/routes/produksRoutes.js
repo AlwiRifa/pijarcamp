@@ -7,17 +7,17 @@ const router = express.Router();
 router.post('/', async (request, response) => {
   try {
     if (
-      !request.body.nama_produk||
+      !request.body.namaProduk ||  // Mengganti nama_produk menjadi namaProduk
       !request.body.keterangan ||
       !request.body.harga ||
       !request.body.jumlah
     ) {
       return response.status(400).send({
-        message: 'Send all required fields: title, author, publishYear',
+        message: 'Send all required fields: namaProduk, keterangan, harga, jumlah',
       });
     }
     const newProduk = {
-      nama_produk: request.body.nama_produk,
+      namaProduk: request.body.namaProduk,  // Mengganti nama_produk menjadi namaProduk
       keterangan: request.body.keterangan,
       harga: request.body.harga,
       jumlah : request.body.jumlah

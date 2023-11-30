@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSnackbar } from "notistack";
 
 const CreateProduk = ({ destination = "/" }) => {
-  const [namaProduk, setNamaProduk] = useState("");
+  const [namaProdukState, setNamaProdukState] = useState("");
   const [keterangan, setKeterangan] = useState("");
   const [harga, setHarga] = useState("");
   const [jumlah, setJumlah] = useState("");
@@ -14,7 +14,7 @@ const CreateProduk = ({ destination = "/" }) => {
 
   const handleSaveBook = () => {
     const data = {
-      nama_produk: namaProduk,
+      namaProduk: namaProduk,
       keterangan: keterangan,
       harga: harga,
       jumlah: jumlah,
@@ -50,8 +50,8 @@ const CreateProduk = ({ destination = "/" }) => {
             </label>
             <input
               type="text"
-              value={namaProduk}
-              onChange={(e) => setNamaProduk(e.target.value)}
+              value={namaProdukState}
+              onChange={(e) => setNamaProdukState(e.target.value)}
               className="border rounded-lg border-zinc-300 px-4 py-2 w-full"
             />
           </div>

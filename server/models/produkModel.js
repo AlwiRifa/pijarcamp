@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const ProdukSchema = mongoose.Schema(
   {
-    nama_produk: {
+    namaProduk: {  // Mengganti nama_produk menjadi namaProduk
       type: String,
       required: true,
     },
