@@ -10,7 +10,7 @@ const ShowProduk = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://pijarcamp-server.vercel.app/produks/${id}`)
+      .get(`https://pijarcamp-server.vercel.app/produks/produks/${id}`)
       .then((response) => {
         setProduk(response.data);
         setLoading(false);

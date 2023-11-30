@@ -21,7 +21,7 @@ const CreateProduk = ({ destination = "/" }) => {
     };
     setLoading(true);
     axios
-      .post("pijarcamp-server.vercel.app/produks", data) // Update the endpoint to match your backend
+      .post("https://pijarcamp-server.vercel.app/produks", data) // Update the endpoint to match your backend
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Produk Created successfully", { variant: "success" });
