@@ -12,7 +12,7 @@ const DeleteProduk = ({ destination = "/" }) => {
   const handleDeleteProduk = () => {
     setLoading(true);
     axios
-      .delete(`pijarcamp-server.vercel.app/produks/${id}`) // Update the endpoint to match your backend
+      .delete(`https://pijarcamp-server.vercel.app/produks/${id}`) // Update the endpoint to match your backend
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Product Deleted successfully", { variant: "success" });

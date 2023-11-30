@@ -16,7 +16,7 @@ const EditProduk = ({ destination = "/" }) => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`pijarcamp-server.vercel.app/produks/${id}`)
+      .get(`https://pijarcamp-server.vercel.app/produks/${id}`)
       .then((response) => {
         setNamaProduk(response.data.nama_produk);
         setKeterangan(response.data.keterangan);
