@@ -35,7 +35,7 @@ const ShowProduk = () => {
           </div>
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500'>Nama Produk</span>
-            <span>{produk.nama_produk}</span>
+            <span>{produk.namaProduk}</span>
           </div>
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500'>Keterangan</span>

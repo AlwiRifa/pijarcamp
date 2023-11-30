@@ -21,7 +21,7 @@ const ProduksTable = ({ produks }) => {
         {produks.map((produk, index) => (
           <tr key={produk._id} className='p-6 hover:bg-zinc-100 border-b text-zinc-900'>
             <td className='p-4 text-center'>{index + 1}</td>
-            <td className='p-4 text-left'>{produk.nama_produk}</td>
+            <td className='p-4 text-left'>{produk.namaProduk}</td>
             <td className='p-4 text-left'>{produk.keterangan}</td>
             <td className='p-4 text-center font-medium'>Rp.{produk.harga}</td>
             <td className='p-4 text-center'>{produk.jumlah}</td>
