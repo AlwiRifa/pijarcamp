@@ -22,6 +22,7 @@ const EditProduk = ({ destination = "/" }) => {
         setKeterangan(response.data.keterangan);
         setHarga(response.data.harga);
         setJumlah(response.data.jumlah);
+        console.log(response.data)
         setLoading(false);
       })
       .catch((error) => {
